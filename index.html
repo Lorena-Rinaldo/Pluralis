@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#FDEDB1">
+    <meta
+      name="description"
+      content="Formação profissional pensada para pessoas autistas e com TDAH. Aprenda no seu ritmo, com clareza, respeito e foco no trabalho."
+    >
+    <title>Pluralis | Muitas mentes, um só caminho de oportunidade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    >
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pluralis: {
+                yellow: "#FDEDB1",
+                navy: "#212C45",
+                cream: "#FFFDF7",
+                mist: "#EFF2F4",
+                muted: "#566176"
+              }
+            },
+            fontFamily: {
+              heading: ["Panton", "Nunito Sans", "Arial", "sans-serif"],
+              mono: ["Google Sans Mono", "Roboto Mono", "monospace"]
+            },
+            boxShadow: {
+              calm: "0 18px 55px rgba(33, 44, 69, 0.08)"
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      :root {
+        color-scheme: light;
+        --site-header-height: 5.0625rem;
+        scroll-behavior: smooth;
+        scroll-padding-top: var(--site-header-height);
+      }
+
+      @media (min-width: 40rem) {
+        :root {
+          --site-header-height: 5.5625rem;
+        }
+      }
+
+      body {
+        font-family: "Nunito Sans", Arial, sans-serif;
+        color: #212c45;
+      }
+
+      h1,
+      h2,
+      h3,
+      .font-heading {
+        font-family: "Panton", "Nunito Sans", Arial, sans-serif;
+      }
+
+      main > section {
+        display: flex;
+        align-items: center;
+        min-height: calc(100vh - var(--site-header-height));
+        min-height: calc(100svh - var(--site-header-height));
+        scroll-margin-top: var(--site-header-height);
+      }
+
+      main {
+        padding-top: var(--site-header-height);
+      }
+
+      main > section > div {
+        width: 100%;
+      }
+
+      :focus-visible {
+        outline: 3px solid #536a9b;
+        outline-offset: 4px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white text-pluralis-navy antialiased">
+    <a
+      class="sr-only z-50 rounded-lg bg-white px-5 py-3 text-pluralis-navy focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+      href="#conteudo"
+    >
+      Pular para o conteúdo
+    </a>
+
+    <header id="site-header" class="fixed inset-x-0 top-0 z-40 border-b border-pluralis-navy/10 bg-white">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-3 sm:px-8 lg:px-12">
+        <a class="shrink-0 rounded-lg" href="#inicio" aria-label="Pluralis — início">
+          <img
+            class="h-14 w-[5.25rem] object-contain sm:h-16 sm:w-24"
+            src="assets/pluralis-logo.webp"
+            alt="Pluralis"
+            width="768"
+            height="512"
+          >
+        </a>
+        <nav class="hidden items-center gap-8 text-base sm:flex" aria-label="Navegação principal">
+          <a class="rounded py-2 hover:underline" href="#proposta">Nossa proposta</a>
+          <a class="rounded py-2 hover:underline" href="#como-funciona">Como funciona</a>
+          <a class="rounded py-2 hover:underline" href="#duvidas">Dúvidas</a>
+        </nav>
+        <a
+          class="inline-flex min-h-12 items-center justify-center rounded-full bg-pluralis-navy px-5 text-center text-base font-semibold text-white transition-colors hover:bg-pluralis-navy/90"
+          href="#interesse"
+        >
+          Quero conhecer
+        </a>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section id="inicio" class="relative overflow-hidden bg-pluralis-navy text-white">
+        <div class="mx-auto grid max-w-7xl items-center gap-4 px-5 pt-4 pb-16 sm:gap-8 sm:px-8 sm:pt-10 sm:pb-16 md:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:px-12 lg:py-20">
+          <div class="max-w-2xl">
+            <p class="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 font-mono text-sm font-medium text-pluralis-yellow">
+              Formação profissional acessível
+            </p>
+            <h1 class="font-heading text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
+              Uma profissão. Do seu jeito.
+            </h1>
+            <p class="mt-4 max-w-xl text-lg leading-relaxed sm:text-xl">
+              Formação para pessoas autistas e com TDAH, com respeito ao seu ritmo de aprendizagem.
+            </p>
+            <div class="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <a
+                class="inline-flex min-h-14 items-center justify-center rounded-full bg-pluralis-yellow px-7 text-center text-lg font-bold text-pluralis-navy transition-transform hover:-translate-y-0.5"
+                href="#interesse"
+              >
+                Conheça a proposta
+              </a>
+              <span class="text-base text-white/85">Para pessoas a partir de 16 anos.</span>
+            </div>
+            <p class="mt-5 hidden font-mono text-sm text-white/75 sm:block">Muitas mentes, um só caminho de oportunidade.</p>
+          </div>
+
+          <figure class="mx-auto w-full max-w-[10rem] sm:max-w-[16rem] md:max-w-none lg:max-w-lg">
+            <img
+              class="h-auto w-full rounded-2xl border-4 border-white object-cover shadow-calm"
+              src="assets/pluralis-learning-reference.webp"
+              alt="Notebook exibindo uma interface de curso online."
+              width="735"
+              height="401"
+              fetchpriority="high"
+            >
+            <figcaption class="mt-2 text-center text-xs leading-relaxed text-white/85">
+              Interface e marca na imagem são de terceiros.
+            </figcaption>
+          </figure>
+        </div>
+        <a
+          class="absolute bottom-3 left-1/2 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full bg-pluralis-yellow text-black shadow-calm"
+          href="#momento"
+          aria-label="Rolar para a próxima seção"
+        >
+          <i data-lucide="arrow-down" class="h-6 w-6" aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <section id="momento" class="bg-white" aria-labelledby="momento-titulo">
+        <div class="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 sm:py-16 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:px-12">
+          <div>
+            <h2 id="momento-titulo" class="font-heading mt-3 text-4xl font-bold leading-tight sm:text-5xl">
+              Quando os cursos parecem feitos para outra pessoa.
+            </h2>
+          </div>
+          <div class="rounded-3xl bg-pluralis-mist p-6 sm:p-8">
+            <p class="text-lg leading-relaxed">
+              Instruções confusas, pressa e um único jeito de ensinar podem dificultar a aprendizagem. Aqui, seu ritmo é respeitado.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="proposta" class="bg-pluralis-yellow" aria-labelledby="proposta-titulo">
+        <div class="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16 lg:px-12">
+          <div class="mx-auto max-w-3xl">
+            <p class="font-mono text-sm font-semibold uppercase tracking-wide text-pluralis-muted">A proposta Pluralis</p>
+            <h2 id="proposta-titulo" class="font-heading mt-3 text-4xl font-bold leading-tight sm:text-5xl">
+              O que você vai encontrar
+            </h2>
+          </div>
+
+          <div class="mt-7 grid gap-4 md:grid-cols-3">
+            <article class="rounded-2xl border border-pluralis-navy/10 bg-white p-6">
+              <h3 class="font-heading text-2xl font-bold">Habilidades profissionais</h3>
+              <p class="mt-2 text-lg leading-relaxed">Conteúdos técnicos para desenvolver competências e se preparar para diferentes caminhos profissionais.</p>
+            </article>
+            <article class="rounded-2xl border border-pluralis-navy/10 bg-white p-6">
+              <h3 class="font-heading text-2xl font-bold">Estratégias para a rotina</h3>
+              <p class="mt-2 text-lg leading-relaxed">Organização, rotina e comunicação para trazer mais clareza ao dia a dia profissional.</p>
+            </article>
+            <article class="rounded-2xl border border-pluralis-navy/10 bg-white p-6">
+              <h3 class="font-heading text-2xl font-bold">Conexão com empresas</h3>
+              <p class="mt-2 text-lg leading-relaxed">Uma proposta que aproxima a formação de empresas e oportunidades do mundo do trabalho.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="como-funciona" class="bg-pluralis-navy text-white" aria-labelledby="funciona-titulo">
+        <div class="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-14 lg:px-12">
+          <h2 id="funciona-titulo" class="font-heading text-4xl font-bold leading-tight sm:text-5xl">Um caminho de aprendizagem e trabalho.</h2>
+          <div class="mt-7 grid items-stretch gap-8 lg:grid-cols-[1fr_1.2fr] lg:gap-12">
+            <div class="space-y-4">
+              <article class="flex gap-4 rounded-2xl bg-white p-5 text-pluralis-navy">
+                <i data-lucide="book-open" class="mt-1 h-6 w-6 shrink-0" aria-hidden="true"></i>
+                <div>
+                  <h3 class="font-heading text-2xl font-bold">Uma formação no seu ritmo</h3>
+                  <p class="mt-2 text-lg leading-relaxed">Formação online e presencial no Sudeste, com respeito ao ritmo de cada pessoa.</p>
+                </div>
+              </article>
+              <article class="flex gap-4 rounded-2xl bg-white p-5 text-pluralis-navy">
+                <i data-lucide="list-checks" class="mt-1 h-6 w-6 shrink-0" aria-hidden="true"></i>
+                <div>
+                  <h3 class="font-heading text-2xl font-bold">Mais autonomia para aprender</h3>
+                  <p class="mt-2 text-lg leading-relaxed">Desenvolva competências e estratégias para organização e comunicação no dia a dia profissional.</p>
+                </div>
+              </article>
+              <article class="flex gap-4 rounded-2xl bg-white p-5 text-pluralis-navy">
+                <i data-lucide="briefcase" class="mt-1 h-6 w-6 shrink-0" aria-hidden="true"></i>
+                <div>
+                  <h3 class="font-heading text-2xl font-bold">A diferença faz parte do método</h3>
+                  <p class="mt-2 text-lg leading-relaxed">Aprenda uma profissão em uma escola feita para pessoas neurodivergentes.</p>
+                </div>
+              </article>
+            </div>
+            <figure class="relative mx-auto aspect-video w-full max-w-xl lg:mx-0 lg:h-full lg:max-w-none lg:aspect-auto">
+              <img
+                class="h-full w-full rounded-2xl border-4 border-white object-cover shadow-calm"
+                src="assets/pluralis-team-reference.webp"
+                alt="Grupo de profissionais em uma foto ilustrativa."
+                width="728"
+                height="379"
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption class="absolute inset-x-3 bottom-3 rounded-lg bg-pluralis-navy/90 px-3 py-2 text-sm leading-relaxed text-white">
+                Imagem ilustrativa; as pessoas e a marca na foto não representam a equipe Pluralis.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white" aria-labelledby="transparencia-titulo">
+        <div class="mx-auto grid max-w-7xl gap-5 px-5 py-12 sm:px-8 sm:py-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:px-12">
+          <h2 id="transparencia-titulo" class="font-heading text-4xl font-bold leading-tight sm:text-5xl">Confiança também é transparência.</h2>
+          <p class="text-lg leading-relaxed">
+            O material disponível ainda não inclui depoimentos de alunos ou números verificados. Preferimos não publicar avaliações ou resultados inventados.
+          </p>
+        </div>
+      </section>
+
+      <section id="duvidas" class="bg-pluralis-navy text-white" aria-labelledby="duvidas-titulo">
+        <div class="mx-auto max-w-4xl px-5 py-14 sm:px-8 sm:py-16">
+          <h2 id="duvidas-titulo" class="font-heading text-4xl font-bold sm:text-5xl">Dúvidas frequentes</h2>
+          <div class="mt-6 divide-y divide-pluralis-navy/15 rounded-2xl border border-pluralis-navy/15 bg-white px-5 text-pluralis-navy sm:px-7">
+            <details class="group py-5">
+              <summary class="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+                Para quem é a formação?
+                <span class="font-mono text-2xl" aria-hidden="true">+</span>
+              </summary>
+              <p class="mt-2 pr-7 text-lg leading-relaxed">Para jovens e adultos autistas e com TDAH, a partir de 16 anos.</p>
+            </details>
+            <details class="group py-5">
+              <summary class="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+                Quanto custa?
+                <span class="font-mono text-2xl" aria-hidden="true">+</span>
+              </summary>
+              <p class="mt-2 pr-7 text-lg leading-relaxed">O preço ainda não está definido. O investimento da turma será divulgado antes de abrir inscrições.</p>
+            </details>
+            <details class="group py-5">
+              <summary class="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+                A formação garante emprego?
+                <span class="font-mono text-2xl" aria-hidden="true">+</span>
+              </summary>
+              <p class="mt-2 pr-7 text-lg leading-relaxed">Não. A formação desenvolve habilidades e busca aproximar estudantes e empresas, mas não garante contratação.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="convite" class="bg-white" aria-labelledby="convite-titulo">
+        <div class="mx-auto grid max-w-7xl items-center gap-8 px-5 py-14 sm:px-8 sm:py-16 lg:grid-cols-2 lg:gap-12 lg:px-12">
+          <figure>
+            <img
+              class="aspect-video w-full rounded-2xl object-cover shadow-calm"
+              src="assets/pluralis-community.webp"
+              alt="Grupo diverso de pessoas conversando ao redor de uma mesa."
+              width="700"
+              height="385"
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption class="mt-2 text-sm text-pluralis-muted">Imagem ilustrativa.</figcaption>
+          </figure>
+          <div>
+            <h2 id="convite-titulo" class="font-heading text-4xl font-bold leading-tight sm:text-5xl">
+              Seu próximo passo começa com uma conversa.
+            </h2>
+            <p class="mt-4 text-lg leading-relaxed">
+              Conheça a proposta da Pluralis e descubra como construir, no seu ritmo, um caminho de aprendizagem e trabalho.
+            </p>
+            <a
+              class="mt-7 inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-pluralis-navy px-7 text-lg font-bold text-white transition-colors hover:bg-pluralis-navy/90"
+              href="#interesse"
+            >
+              Venha participar
+              <i data-lucide="arrow-right" class="h-5 w-5" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="interesse" class="bg-pluralis-navy text-white" aria-labelledby="interesse-titulo">
+        <div class="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 sm:py-16 lg:grid-cols-[1fr_0.85fr] lg:items-center lg:px-12">
+          <div>
+            <p class="font-mono text-sm font-semibold uppercase tracking-wide text-pluralis-yellow">Vamos conversar?</p>
+            <h2 id="interesse-titulo" class="font-heading mt-3 text-4xl font-bold leading-tight sm:text-5xl">
+              Receba novidades da Pluralis.
+            </h2>
+            <p class="mt-4 max-w-xl text-lg leading-relaxed text-white/85">
+              Informe seu e-mail para receber avisos sobre novas turmas e novidades da proposta Pluralis.
+            </p>
+          </div>
+          <form id="interest-form" class="rounded-3xl bg-pluralis-mist p-6 text-pluralis-navy sm:p-8" novalidate>
+            <label class="block text-base font-semibold" for="email">Seu e-mail</label>
+            <input
+              class="mt-2 min-h-14 w-full rounded-xl border border-pluralis-navy/30 bg-white px-4 text-lg"
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              inputmode="email"
+              placeholder="voce@exemplo.com"
+              required
+              aria-describedby="email-help form-status"
+            >
+            <p id="email-help" class="mt-2 text-sm leading-relaxed text-pluralis-muted">
+              Sem pedir diagnóstico ou dados de saúde.
+            </p>
+            <button
+              class="mt-5 inline-flex min-h-14 w-full items-center justify-center rounded-full bg-pluralis-navy px-6 text-lg font-bold text-white transition-colors hover:bg-pluralis-navy/90"
+              type="submit"
+            >
+              Quero receber novidades
+            </button>
+            <p id="form-status" class="mt-4 text-sm leading-relaxed text-pluralis-muted" role="status" aria-live="polite">
+              Formulário demonstrativo: não envia nem armazena dados.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-white">
+      <div class="mx-auto max-w-7xl px-5 py-10 sm:px-8 lg:px-12">
+        <div class="flex flex-col gap-6 border-b border-pluralis-navy/10 pb-8 sm:flex-row sm:items-center sm:justify-between">
+          <div class="flex items-center gap-4">
+            <img class="h-14 w-20 object-contain" src="assets/pluralis-logo.webp" alt="" width="768" height="512">
+            <div>
+              <p class="font-heading text-lg font-bold">Muitas mentes, um só caminho de oportunidade.</p>
+              <p class="mt-1 text-sm text-pluralis-muted">Educação acessível para diferentes maneiras de aprender.</p>
+            </div>
+          </div>
+          <p class="text-sm leading-relaxed text-pluralis-muted">
+            CNPJ demonstrativo: 00.000.000/0000-00<br>
+            Número fictício — substituir antes da publicação.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-5 pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-sm text-pluralis-muted">© <span id="current-year"></span> Pluralis. Todos os direitos reservados.</p>
+          <div class="flex flex-wrap gap-6 text-sm font-semibold">
+            <a class="rounded py-2 underline underline-offset-4" href="#politica">Política de Privacidade</a>
+            <a class="rounded py-2 underline underline-offset-4" href="#termos">Termos de Uso</a>
+          </div>
+        </div>
+
+        <details id="politica" class="mt-6 rounded-xl border border-pluralis-navy/10 p-5">
+          <summary class="cursor-pointer text-base font-semibold">Política de Privacidade — aviso demonstrativo</summary>
+          <p class="mt-3 text-sm leading-relaxed text-pluralis-muted">
+            Este protótipo não envia nem armazena as informações digitadas no formulário. Antes de coletar dados reais, a Pluralis deverá publicar uma política definitiva com a identificação do controlador, finalidade e base legal, período de retenção, canal para solicitações e medidas de segurança, conforme a legislação aplicável.
+          </p>
+        </details>
+        <details id="termos" class="mt-3 rounded-xl border border-pluralis-navy/10 p-5">
+          <summary class="cursor-pointer text-base font-semibold">Termos de Uso — aviso demonstrativo</summary>
+          <p class="mt-3 text-sm leading-relaxed text-pluralis-muted">
+            As informações sobre cursos nesta página apresentam a proposta institucional da Pluralis. Preços, datas, requisitos, certificados, suporte, cancelamentos e demais condições deverão ser apresentados nos termos específicos de cada oferta antes da inscrição.
+          </p>
+        </details>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
