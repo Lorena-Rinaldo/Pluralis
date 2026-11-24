@@ -5,7 +5,24 @@ document.querySelector("#current-year").textContent = new Date().getFullYear();
 const interestForm = document.querySelector("#interest-form");
 const ebookModal = document.querySelector("#ebook-modal");
 const formToast = document.querySelector("#form-toast");
+const phoneInput = document.querySelector("#telefone");
+const messageInput = document.querySelector("#mensagem");
+const messageCounter = document.querySelector("#message-counter");
 let toastTimeout;
+
+phoneInput.addEventListener("input", () => {
+  phoneInput.value = phoneInput.value.replace(/\D/g, "").slice(0, 11);
+});
+
+messageInput.addEventListener("input", () => {
+  const words = messageInput.value.trim().split(/\s+/).filter(Boolean);
+  if (words.length > 250) {
+    messageInput.value = words.slice(0, 250).join(" ");
+  }
+
+  const wordCount = messageInput.value.trim().split(/\s+/).filter(Boolean).length;
+  messageCounter.textContent = `${wordCount}/250 palavras`;
+});
 
 function closeEbookModal() {
   ebookModal.hidden = true;
