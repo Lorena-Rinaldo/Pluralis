@@ -88,6 +88,11 @@
         outline-offset: 4px;
       }
 
+      #ebook-modal[hidden],
+      #form-toast[hidden] {
+        display: none !important;
+      }
+
       @media (prefers-reduced-motion: reduce) {
         *,
         *::before,
@@ -342,18 +347,18 @@
           <div>
             <p class="font-mono text-sm font-semibold uppercase tracking-wide text-pluralis-yellow">Vamos conversar?</p>
             <h2 id="interesse-titulo" class="font-heading mt-3 text-4xl font-bold leading-tight sm:text-5xl">
-              Receba seu e-book gratuito.
+              Receba os e-books gratuitos.
             </h2>
             <p class="mt-4 max-w-xl text-lg leading-relaxed text-white/85">
-              Preencha seus dados para baixar o e-book da proposta Pluralis.
+              Envie seus dados para receber os materiais e, se quiser, conte como podemos ajudar.
             </p>
           </div>
-          <form id="interest-form" class="rounded-3xl bg-pluralis-mist p-6 text-pluralis-navy sm:p-8" novalidate>
+          <form id="interest-form" class="rounded-3xl bg-pluralis-mist p-6 text-pluralis-navy sm:p-8" action="https://primeiro-plano.com/crm/capturar.php?k=c6c99003ef8ee1d627f8915e" method="post" target="crm-response">
             <label class="block text-base font-semibold" for="full-name">Nome completo</label>
             <input
               class="mt-2 min-h-14 w-full rounded-xl border border-pluralis-navy/30 bg-white px-4 text-lg"
               id="full-name"
-              name="name"
+              name="nome"
               type="text"
               autocomplete="name"
               placeholder="Seu nome completo"
@@ -372,19 +377,49 @@
               required
               aria-describedby="form-status"
             >
-            <p id="email-help" class="mt-2 text-sm leading-relaxed text-pluralis-muted">
-              Usaremos seus dados apenas para liberar o e-book.
-            </p>
+            <label class="mt-4 block text-base font-semibold" for="telefone">WhatsApp (opcional)</label>
+            <input
+              class="mt-2 min-h-14 w-full rounded-xl border border-pluralis-navy/30 bg-white px-4 text-lg"
+              id="telefone"
+              name="telefone"
+              type="tel"
+              autocomplete="tel"
+              placeholder="(00) 00000-0000"
+            >
+            <label class="mt-4 block text-base font-semibold" for="mensagem">Como podemos ajudar? (opcional)</label>
+            <textarea
+              class="mt-2 min-h-28 w-full rounded-xl border border-pluralis-navy/30 bg-white px-4 py-3 text-lg"
+              id="mensagem"
+              name="mensagem"
+              rows="4"
+              placeholder="Escreva sua mensagem"
+            ></textarea>
+            <input type="text" name="_hp" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
             <button
               class="mt-5 inline-flex min-h-14 w-full items-center justify-center rounded-full bg-pluralis-navy px-6 text-lg font-bold text-white transition-colors hover:bg-pluralis-navy/90"
               type="submit"
             >
-              Quero receber o e-book
+              Enviar e baixar os e-books
             </button>
             <p id="form-status" class="mt-4 text-sm leading-relaxed text-pluralis-muted" role="status" aria-live="polite">
-              Seus dados não serão armazenados por este formulário.
+              Seus dados serão enviados ao CRM para registro deste contato.
             </p>
           </form>
+          <iframe name="crm-response" title="Resposta do CRM" class="hidden" aria-hidden="true"></iframe>
+          <div id="ebook-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-pluralis-navy/75 p-4" role="dialog" aria-modal="true" aria-labelledby="ebook-modal-title" aria-describedby="ebook-modal-description" tabindex="-1" hidden>
+            <div class="relative w-full max-w-2xl rounded-3xl bg-pluralis-mist p-7 text-pluralis-navy shadow-calm sm:p-10">
+              <button id="ebook-modal-close" class="absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center rounded-full text-3xl leading-none hover:bg-pluralis-navy/10" type="button" aria-label="Fechar janela de download">&times;</button>
+              <h3 id="ebook-modal-title" class="font-heading pr-12 text-2xl font-bold sm:text-3xl">Obrigado pelo interesse!</h3>
+              <p id="ebook-modal-description" class="mt-3 text-lg sm:text-xl">Seus e-books estão prontos para baixar.</p>
+              <div class="mt-6 grid gap-3">
+                <a class="inline-flex min-h-14 items-center justify-center rounded-full bg-pluralis-navy px-6 text-lg font-bold text-white transition-colors hover:bg-pluralis-navy/90" href="assets/ebook_pluralis.pdf" download>Baixar e-book 1</a>
+                <a class="inline-flex min-h-14 items-center justify-center rounded-full bg-pluralis-navy px-6 text-lg font-bold text-white transition-colors hover:bg-pluralis-navy/90" href="assets/ebook_pluralis_2.pdf" download>Baixar e-book 2</a>
+              </div>
+            </div>
+          </div>
+          <div id="form-toast" class="fixed bottom-5 right-5 z-[60] max-w-sm rounded-2xl bg-pluralis-yellow px-5 py-4 text-pluralis-navy shadow-calm" role="status" aria-live="polite" hidden>
+            Seus dados foram enviados com sucesso. Obrigado!
+          </div>
         </div>
       </section>
     </main>
@@ -416,7 +451,7 @@
         <details id="politica" class="mt-6 rounded-xl border border-pluralis-navy/10 p-5">
           <summary class="cursor-pointer text-base font-semibold">Política de Privacidade — aviso demonstrativo</summary>
           <p class="mt-3 text-sm leading-relaxed text-pluralis-muted">
-            Este protótipo não envia nem armazena as informações digitadas no formulário. Antes de coletar dados reais, a Pluralis deverá publicar uma política definitiva com a identificação do controlador, finalidade e base legal, período de retenção, canal para solicitações e medidas de segurança, conforme a legislação aplicável.
+            Ao enviar o formulário, nome e e-mail, além do telefone e da mensagem se preenchidos, serão encaminhados ao CRM Primeiro Plano para registro do contato. Consulte a política de privacidade do responsável pelo CRM para saber como esses dados são tratados. A Pluralis também deverá publicar sua política definitiva antes de coletar dados reais.
           </p>
         </details>
         <details id="termos" class="mt-3 rounded-xl border border-pluralis-navy/10 p-5">

@@ -1,39 +1,38 @@
 "use strict";
 
+document.querySelector("#current-year").textContent = new Date().getFullYear();
+
 const interestForm = document.querySelector("#interest-form");
+const ebookModal = document.querySelector("#ebook-modal");
+const formToast = document.querySelector("#form-toast");
+let toastTimeout;
 
-interestForm.addEventListener("submit", (event) => {
-  event.preventDefault();
+function closeEbookModal() {
+  ebookModal.hidden = true;
+  interestForm.querySelector("button[type='submit']").focus();
+}
 
-  if (!interestForm.reportValidity()) {
-    return;
-  }
-
-  interestForm.innerHTML = `
-    <div class="flex min-h-64 flex-col items-start justify-center" role="status" aria-live="polite">
-      <h3 class="font-heading text-2xl font-bold">Agradecemos pela confiança.</h3>
-      <p class="mt-2 text-lg">Baixe seus e-books</p>
-      <div class="mt-6 grid w-full gap-3">
-        <a
-          class="inline-flex min-h-14 items-center justify-center rounded-full bg-pluralis-navy px-6 text-lg font-bold text-white transition-colors hover:bg-pluralis-navy/90"
-          href="assets/ebook_pluralis.pdf"
-          download
-        >
-          Baixar e-book 1
-        </a>
-        <a
-          class="inline-flex min-h-14 items-center justify-center rounded-full bg-pluralis-navy px-6 text-lg font-bold text-white transition-colors hover:bg-pluralis-navy/90"
-          href="assets/ebook_pluralis_2.pdf"
-          download
-        >
-          Baixar e-book 2
-        </a>
-      </div>
-    </div>
-  `;
+interestForm.addEventListener("submit", () => {
+  ebookModal.hidden = false;
+  ebookModal.focus();
+  formToast.hidden = false;
+  window.clearTimeout(toastTimeout);
+  toastTimeout = window.setTimeout(() => {
+    formToast.hidden = true;
+  }, 6000);
 });
 
-document.querySelector("#current-year").textContent = new Date().getFullYear();
+document.querySelector("#ebook-modal-close").addEventListener("click", closeEbookModal);
+ebookModal.addEventListener("click", (event) => {
+  if (event.target === ebookModal) {
+    closeEbookModal();
+  }
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !ebookModal.hidden) {
+    closeEbookModal();
+  }
+});
 
 const faqItems = document.querySelectorAll("#duvidas details");
 faqItems.forEach((item) => {
