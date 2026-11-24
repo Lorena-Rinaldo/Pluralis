@@ -341,14 +341,25 @@
           <div>
             <p class="font-mono text-sm font-semibold uppercase tracking-wide text-pluralis-yellow">Vamos conversar?</p>
             <h2 id="interesse-titulo" class="font-heading mt-3 text-4xl font-bold leading-tight sm:text-5xl">
-              Receba novidades da Pluralis.
+              Receba seu e-book gratuito.
             </h2>
             <p class="mt-4 max-w-xl text-lg leading-relaxed text-white/85">
-              Informe seu e-mail para receber avisos sobre novas turmas e novidades da proposta Pluralis.
+              Preencha seus dados para baixar o e-book da proposta Pluralis.
             </p>
           </div>
           <form id="interest-form" class="rounded-3xl bg-pluralis-mist p-6 text-pluralis-navy sm:p-8" novalidate>
-            <label class="block text-base font-semibold" for="email">Seu e-mail</label>
+            <label class="block text-base font-semibold" for="full-name">Nome completo</label>
+            <input
+              class="mt-2 min-h-14 w-full rounded-xl border border-pluralis-navy/30 bg-white px-4 text-lg"
+              id="full-name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              placeholder="Seu nome completo"
+              required
+              aria-describedby="form-status"
+            >
+            <label class="mt-4 block text-base font-semibold" for="email">Seu e-mail</label>
             <input
               class="mt-2 min-h-14 w-full rounded-xl border border-pluralis-navy/30 bg-white px-4 text-lg"
               id="email"
@@ -358,19 +369,19 @@
               inputmode="email"
               placeholder="voce@exemplo.com"
               required
-              aria-describedby="email-help form-status"
+              aria-describedby="form-status"
             >
             <p id="email-help" class="mt-2 text-sm leading-relaxed text-pluralis-muted">
-              Sem pedir diagnóstico ou dados de saúde.
+              Usaremos seus dados apenas para liberar o e-book.
             </p>
             <button
               class="mt-5 inline-flex min-h-14 w-full items-center justify-center rounded-full bg-pluralis-navy px-6 text-lg font-bold text-white transition-colors hover:bg-pluralis-navy/90"
               type="submit"
             >
-              Quero receber novidades
+              Quero receber o e-book
             </button>
             <p id="form-status" class="mt-4 text-sm leading-relaxed text-pluralis-muted" role="status" aria-live="polite">
-              Formulário demonstrativo: não envia nem armazena dados.
+              Seus dados não serão armazenados por este formulário.
             </p>
           </form>
         </div>

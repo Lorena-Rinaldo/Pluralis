@@ -1,7 +1,6 @@
 "use strict";
 
 const interestForm = document.querySelector("#interest-form");
-const formStatus = document.querySelector("#form-status");
 
 interestForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -10,8 +9,28 @@ interestForm.addEventListener("submit", (event) => {
     return;
   }
 
-  formStatus.textContent =
-    "Formulário demonstrativo: não envia nem armazena dados.";
+  interestForm.innerHTML = `
+    <div class="flex min-h-64 flex-col items-start justify-center" role="status" aria-live="polite">
+      <h3 class="font-heading text-2xl font-bold">Agradecemos pela confiança.</h3>
+      <p class="mt-2 text-lg">Baixe seus e-books</p>
+      <div class="mt-6 grid w-full gap-3">
+        <a
+          class="inline-flex min-h-14 items-center justify-center rounded-full bg-pluralis-navy px-6 text-lg font-bold text-white transition-colors hover:bg-pluralis-navy/90"
+          href="assets/ebook_pluralis.pdf"
+          download
+        >
+          Baixar e-book 1
+        </a>
+        <a
+          class="inline-flex min-h-14 items-center justify-center rounded-full bg-pluralis-navy px-6 text-lg font-bold text-white transition-colors hover:bg-pluralis-navy/90"
+          href="assets/ebook_pluralis_2.pdf"
+          download
+        >
+          Baixar e-book 2
+        </a>
+      </div>
+    </div>
+  `;
 });
 
 document.querySelector("#current-year").textContent = new Date().getFullYear();
